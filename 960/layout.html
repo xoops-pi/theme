@@ -1,0 +1,143 @@
+<{*Load theme translation*}>
+<{translation data=main}>
+
+<!-- DocType -->
+<{$doctype}>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<{$headMeta}>
+<{$headTitle}>
+<{$headLink}>
+<{$headScript}>
+<{$headStyle}>
+
+<!-- Load theme locale scripts, solely for demonstration -->
+<link type="text/css" rel="stylesheet" media="all" href="<{localeUrl path='locale.css'}>" />
+
+<!-- customized header contents -->
+<{if isset($xoops_module_header)}>
+	<{$xoops_module_header}>
+<{/if}>
+</head>
+<body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
+
+<!-- Start Header -->
+<div class="container_12" id="header">
+	<div class="logo">
+		<h1><a href="<{absUrl path=www}>" title="<{$xoops_sitename}>"><{$xoops_sitename}></a></h1>
+        <!-- <div id="header-banner"><{widget key=xoops_banner}></div> -->
+        <!-- <div id="header-account"><{widget key=account size=s}></div> -->
+    </div>
+
+	<!-- Load navigation -->
+	<{navigation assign=navigation}>
+
+	<{if $navigation}>
+		<{include file="navigation.html"}>
+	<{/if}>
+	<{*include file="navigation.html" navigation=$navigation*}>
+	<!-- End header -->
+
+	<!-- Load blocks -->
+	<{blocks assign=xoopsBlocks}>
+	<div id="content">
+		<!-- Start left blocks loop -->
+		<{if isset($xoopsBlocks.left)}>
+		<div class="grid_3" id="left-block">
+			<{foreach item=block from=$xoopsBlocks.left}>
+				<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+				<div class="blockcontent"><{$block.content}></div>
+			<{/foreach}>
+		</div>
+		<{/if}>
+		<!-- End left blocks loop -->
+		
+		<!-- Start center blocks -->
+		<{if isset($xoopsBlocks.left) and isset($xoopsBlocks.left)}>
+		<div class="grid_6">
+		<{elseif isset($xoopsBlocks.left) or isset($xoopsBlocks.left)}>
+		<div class="grid_9">
+		<{else}>
+		<div class="grid_12">
+		<{/if}>
+		<div class="grid_6">
+			<!-- Display center blocks if any -->
+			<!-- Center center -->
+			<{if isset($xoopsBlocks.topcenter)}>
+				<{foreach item=block from=$xoopsBlocks.topcenter}>
+					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<div class="blockcontent"><{$block.content}></div>
+				<{/foreach}>
+			<{/if}>
+			<!-- Center left -->
+			<{if isset($xoopsBlocks.topleft)}>
+				<div class="center-left">
+				<{foreach item=block from=$xoopsBlocks.topleft}>
+					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<div class="blockcontent"><{$block.content}></div>
+				<{/foreach}>
+				</div>
+			<{/if}>
+			<!-- Center right -->
+			<{if isset($xoopsBlocks.topright)}>
+				<div class="center-right">
+				<{foreach item=block from=$xoopsBlocks.topright}>
+					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<div class="blockcontent"><{$block.content}></div>
+				<{/foreach}>
+				</div>
+			<{/if}>
+			<div class="clear"></div>
+			<!-- End center top blocks loop -->
+
+			<!-- Start content module page -->
+			<{if $xoops_contents && ($xoops_contents != ' ')}><div id="content"><{$xoops_contents}></div><{/if}>
+			<!-- End content module -->
+
+			<!-- Start center bottom blocks loop -->
+			<!-- Center center bottom -->
+			<{if isset($xoopsBlocks.bottomcenter)}>
+				<{foreach item=block from=$xoopsBlocks.bottomcenter}>
+					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<div class="blockcontent"><{$block.content}></div>
+				<{/foreach}>
+			<{/if}>
+			<!-- Center left bottom -->
+			<{if isset($xoopsBlocks.bottomleft)}>
+				<div class="center-left">
+				<{foreach item=block from=$xoopsBlocks.bottomleft}>
+					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<div class="blockcontent"><{$block.content}></div>
+				<{/foreach}>
+				</div>
+			<{/if}>
+			<!-- Center right bottom -->
+			<{if isset($xoopsBlocks.bottomright)}>
+				<div class="center-right">
+				<{foreach item=block from=$xoopsBlocks.bottomright}>
+					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<div class="blockcontent"><{$block.content}></div>
+				<{/foreach}>
+				</div>
+			<{/if}>
+			<div class="clear"></div>
+			<!-- End center bottom blocks loop -->
+		</div>
+			<!-- Start right blocks loop -->
+		<{if isset($xoopsBlocks.right)}>
+		<div class="grid_3" id="right-block">
+			<{foreach item=block from=$xoopsBlocks.right}>
+				<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+				<div class="blockcontent"><{$block.content}></div>
+			<{/foreach}>
+		</div>
+		<{/if}>
+		<!-- End left blocks loop -->
+		<div class="clear"></div>
+	</div>
+	<!-- Start footer -->
+	<div class="grid_12"><{$xoops_footer}> | <{__ text=_THEME_DEFAULT_SITE}></div>
+</div>
+<!-- End footer -->
+</body>
+</html>
