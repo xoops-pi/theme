@@ -47,11 +47,11 @@ return array(
     // Version
     "version"       => "1.0.0",
     // Title of the theme
-    "name"          => "XOOPS 3 Theme",
+    "name"          => "960 Framework for X3",
     // Parent theme to inherate
     "parent"        => "",
     // Author information: name, email, website
-    "author"        => "Theme architecture: Taiwen Jiang <taiwenjiang@tsinghua.org.cn>; Resources: Xoops Engine Development Team",
+    "author"        => "Theme: insraq",
     // Screenshot image. If no screenshot is available, the default theme screenshot will be used
     "screenshot"    => "screenshot.png",
     // License or theme images and scripts

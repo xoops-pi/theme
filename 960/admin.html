@@ -10,48 +10,42 @@
 <body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
 
 <!-- Start Header -->
-<table cellspacing="0">
-    <tr id="header">
-        <td id="headerlogo"><a href="<{url path='www/'}>" title="<{$xoops_sitename}>"><img src="<{resourceUrl path='xoops-logo.png'}>" alt="<{$xoops_sitename}>" /></a></td>
-        <td id="headerbanner"><{widget key=xoops_banner}></td>
-    </tr>
-    <tr>
-        <td id="headerbar" colspan="2">&nbsp;</td>
-    </tr>
-</table>
+<div class="container_12" id="header">
+	<div class="logo">
+		<h1><a href="<{absUrl path=www}>" title="<{$xoops_sitename}>"><{$xoops_sitename}></a></h1>
+        <!-- <div id="header-banner"><{widget name=xoops_banner}></div> -->
+        <!-- <div id="header-account"><{widget name=account}></div> -->
+    </div>
 
-<{navigation assign=navigation}>
+	<!-- Load navigation -->
+	<{navigation assign=navigation}>
 
-<{if $navigation}>
-    <{include file="navigation.html"}>
-<{/if}>
-<!-- End header -->
+	<{if $navigation}>
+		<{include file="navigation.html"}>
+	<{/if}>
+	<{*include file="navigation.html" navigation=$navigation*}>
+	<!-- End header -->
 
-<table cellspacing="0">
-    <tr>
-        <{if isset($side_menu)}>
-        <td id="leftcolumn">
+	
+	<{if isset($side_menu)}>
+		<div class="grid_4">
         <!-- Start left blocks loop -->
             <{include file="side_menu.html"}>
         <!-- End left blocks loop -->
-        </td>
-        <{/if}>
-
-        <td id="centercolumn">
-            <!-- Start content module page -->
-            <{if $xoops_contents && ($xoops_contents != ' ')}><div id="content"><{$xoops_contents}></div><{/if}>
-            <!-- End content module -->
-        </td>
-
-    </tr>
-</table>
-
-<!-- Start footer -->
-<table cellspacing="0">
-<tr id="footerbar">
-    <td><{$xoops_footer}></td>
-</tr>
-</table>
-<!-- End footer -->
+		</div>
+		<div class="grid_8">
+	<{else}>
+		<div class="grid_12">
+	<{/if}>
+		<!-- Start content module page -->
+			<{if $xoops_contents && ($xoops_contents != ' ')}><div id="content"><{$xoops_contents}></div><{/if}>
+		<!-- End content module -->
+	</div>
+	<div class="clear"></div>
+	<!-- Start footer -->
+	<div class="grid_12"><{$xoops_footer}></div>
+	<!-- End footer -->
+	<div class="clear"></div>
+</div>
 </body>
 </html>
