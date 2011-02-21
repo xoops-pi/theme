@@ -116,9 +116,12 @@ strong {
 	margin: 0 20px 0 0;
 }
 
-.site-menu ul li a:hover,
+.site-menu ul li a:hover {
+	
+}
+
 .site-menu ul li.active a {
-	border-bottom: 3px solid;
+
 }
 
 .site-menu ul li ul {
@@ -127,8 +130,14 @@ strong {
 	left: 0;
 	display: none;
 	height: 20px;
+	background: #fff;
+}
+
+.site-menu ul li:hover ul, .site-menu ul li.active ul {
+	display: block;
+	z-index: 1
 }
 
 .site-menu ul li:hover ul {
-	display: block;
+	z-index: 2;
 }
