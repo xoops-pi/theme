@@ -26,14 +26,17 @@
         <!-- <div id="header-banner"><{widget name=xoops_banner}></div> -->
         <!-- <div id="header-account"><{widget name=account}></div> -->
     </div>
+</div>
+<div class="container_12">
 	<!-- Load navigation -->
 	<{navigation assign=navigation}>
 	<{if $navigation}>
 		<{include file="nav_lite.html"}>
 	<{/if}>
 	<{*include file="nav_lite.html" navigation=$navigation*}>
+</div>
 	<!-- End header -->
-
+<div class="container_12">
 	<!-- Load blocks -->
 	<{blocks assign=xoopsBlocks}>
 	<div id="content">
@@ -130,7 +133,9 @@
 		<!-- End left blocks loop -->
 		<div class="clear"></div>
 	</div>
-	<!-- Start footer -->
+</div>
+<!-- Start footer -->
+<div class="container_12">
 	<div class="grid_12"><{$xoops_footer}> | <{__ text=_THEME_DEFAULT_SITE}></div>
 	<div class="clear"></div>
 </div>
