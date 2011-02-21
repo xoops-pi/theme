@@ -105,3 +105,30 @@ strong {
 	width: 48%
 	margin: 0 0 0 2%;
 }
+
+/* Navigation */
+.site-menu > ul {
+	position: relative;
+	height: 50px;
+}
+.site-menu ul li {
+	float: left;
+	margin: 0 20px 0 0;
+}
+
+.site-menu ul li a:hover,
+.site-menu ul li.active a {
+	border-bottom: 3px solid;
+}
+
+.site-menu ul li ul {
+	position: absolute;
+	width: 960px;
+	left: 0;
+	display: none;
+	height: 20px;
+}
+
+.site-menu ul li:hover ul {
+	display: block;
+}
