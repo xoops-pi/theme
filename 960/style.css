@@ -17,13 +17,14 @@
 @import url(css/960.css);
 @import url(css/superfish.css);
 @import url(css/superfish-navbar.css);
+@import url(http://fonts.googleapis.com/css?family=Arvo);
 
 /* Body and general style */
 
 body {
 	color: #444;
 	font-size: 13px;
-	font-family: Georgia, "Times New Roman", Times, serif;
+	font-family: Arial, Helvetica, sans-serif;
 	line-height: 1.8;
 }
 
@@ -94,6 +95,10 @@ strong {
 	font-weight: bold;
 }
 
+.line {
+	border-top: 1px solid #ddd;
+}
+
 /* Block related style */
 
 .center-left {
@@ -108,39 +113,122 @@ strong {
 	margin: 0 0 0 2%;
 }
 
-/* Navigation */
-/* Navigation */
-.site-menu > ul {
-	position: relative;
-	height: 50px;
-}
-.site-menu ul li {
-	float: left;
-	margin: 0 20px 0 0;
+/* Header */
+
+.header {
+	background: orange;
+	margin: 0 0 38px 0;
 }
 
-.site-menu ul li a:hover {
+.header h1 {
+	padding: 20px 0;
+	text-shadow: rgba(0, 0, 0, 0) 1px 1px 1px;
+}
+
+.header h1 a {
+	color: #fff;
+	font-family: 'Arvo', Arial, Helvetica, sans-serif;
+	text-shadow: 1px 0px 1px #c66d00;
+}
+
+.header h1 a:hover {
+	text-shadow: 1px -1px 1px #a45a00;
+}
+
+/* Site Menu */
+
+.site-menu {
+	position: relative;
+	font-size: 14px;
+}
+
+.site-menu a {
+	color: orange;
+}
+
+.site-menu li {
+	float: left;
+	margin: 0 5px 0 0;
+	padding: 0 10px;
+	height: 35px;
+	line-height: 35px;
+}
+
+.site-menu > li {
+	background: #ff8c00;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-bottomright: 0px;
+		-moz-border-radius-bottomleft: 0px;
+}
+
+.site-menu > li a {
+	color: #fff;
+}
+
+.site-menu li:hover, .site-menu li.active {
+	background: #ffffff;
+}
+
+.site-menu li:hover a,
+.site-menu li.active a {
+	color: #ff8c00;
+}
+
+.site-menu li.active {
 	
 }
 
-.site-menu ul li.active a {
-
-}
-
-.site-menu ul li ul {
+.site-menu li ul {
 	position: absolute;
 	width: 960px;
 	left: 0;
+	top: 35px;
 	display: none;
-	height: 20px;
 	background: #fff;
 }
 
-.site-menu ul li:hover ul, .site-menu ul li.active ul {
+.site-menu li:hover ul, .site-menu li.active ul {
 	display: block;
 	z-index: 1
 }
 
-.site-menu ul li:hover ul {
+.site-menu li:hover ul {
 	z-index: 2;
+}
+
+.site-menu li:hover ul li,
+.site-menu li.active ul li {
+	border-bottom: 2px solid #fff;
+	height: 30px;
+	line-height: 30px;
+	margin: 6px 5px 0 0;
+}
+
+.site-menu li:hover ul li a,
+.site-menu li.active ul li a {
+	color: #999;
+	font-size: 12px;
+}
+
+.site-menu li ul li:hover,
+.site-menu li ul li.active {
+	border-bottom: 2px solid #ddd;
+	background: #f3f3f3;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+		-moz-border-radius-topleft: 5px;
+		-moz-border-radius-topright: 5px;
+		-moz-border-radius-bottomright: 0px;
+		-moz-border-radius-bottomleft: 0px;
+}
+
+.site-menu li:hover ul li:hover a, .site-menu li ul li.active a {
+	color: #666;
 }

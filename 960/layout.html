@@ -20,22 +20,20 @@
 <body id="<{$xoops_dirname}>" class="<{$xoops_langcode}>">
 
 <!-- Start Header -->
-<div class="container_12">
-	<div class="logo">
+<div class="header">
+	<div class="container_12">
 		<h1><a href="<{absUrl path=www}>" title="<{$xoops_sitename}>"><{$xoops_sitename}></a></h1>
-        <!-- <div id="header-banner"><{widget name=xoops_banner}></div> -->
-        <!-- <div id="header-account"><{widget name=account}></div> -->
-    </div>
+		<!-- <div id="header-banner"><{widget name=xoops_banner}></div> -->
+		<!-- <div id="header-account"><{widget name=account}></div> -->
+		<!-- Load navigation -->
+		<{navigation assign=navigation ulClass="site-menu"}>
+		<{$navigation.menu}>
+		<div class="clear"></div>
+	</div>
 </div>
-<div class="container_12">
-	<!-- Load navigation -->
-	<{navigation assign=navigation}>
-	<{if $navigation}>
-		<{include file="nav_lite.html"}>
-	<{/if}>
-	<{*include file="nav_lite.html" navigation=$navigation*}>
-</div>
-	<!-- End header -->
+<div class="line"></div>
+<!-- <{$navigation.breadcrumbs}> -->
+<!-- End header -->
 <div class="container_12">
 	<!-- Load blocks -->
 	<{blocks assign=xoopsBlocks}>
@@ -140,5 +138,10 @@
 	<div class="clear"></div>
 </div>
 <!-- End footer -->
+<script type="text/javascript"> 
+	$(document).ready(function() { 
+		$('ul.sf-menu').superfish(); 
+	}); 
+</script>
 </body>
 </html>
