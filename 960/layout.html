@@ -60,7 +60,6 @@
 		<{else}>
 		<div class="grid_12">
 		<{/if}>
-		<div class="grid_6">
 			<!-- Display center blocks if any -->
 			<!-- Center center -->
 			<{if isset($xoopsBlocks.topcenter)}>
@@ -91,7 +90,7 @@
 			<!-- End center top blocks loop -->
 
 			<!-- Start content module page -->
-			<{if $xoops_contents && ($xoops_contents != ' ')}><div id="content"><{$xoops_contents}></div><{/if}>
+			<{if $xoops_contents && ($xoops_contents != ' ')}><div class="module-content"><{$xoops_contents}></div><{/if}>
 			<!-- End content module -->
 
 			<!-- Start center bottom blocks loop -->
