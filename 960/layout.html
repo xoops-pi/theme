@@ -10,10 +10,8 @@
 <{$headLink}>
 <{$headScript}>
 <{$headStyle}>
-
-<!-- Load theme locale scripts, solely for demonstration -->
-<link type="text/css" rel="stylesheet" media="all" href="<{localeUrl path='locale.css'}>" />
-
+<!-- Load JQuery -->
+<{jQuery}>
 <!-- customized header contents -->
 <{if isset($xoops_module_header)}>
 	<{$xoops_module_header}>
@@ -28,14 +26,12 @@
         <!-- <div id="header-banner"><{widget name=xoops_banner}></div> -->
         <!-- <div id="header-account"><{widget name=account}></div> -->
     </div>
-
 	<!-- Load navigation -->
 	<{navigation assign=navigation}>
-
 	<{if $navigation}>
-		<{include file="navigation.html"}>
+		<{include file="nav_lite.html"}>
 	<{/if}>
-	<{*include file="navigation.html" navigation=$navigation*}>
+	<{*include file="nav_lite.html" navigation=$navigation*}>
 	<!-- End header -->
 
 	<!-- Load blocks -->

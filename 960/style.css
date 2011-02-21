@@ -15,6 +15,8 @@
 
 @import url(css/reset.css);
 @import url(css/960.css);
+@import url(css/superfish.css);
+@import url(css/superfish-navbar.css);
 
 /* Body and general style */
 
@@ -106,6 +108,7 @@ strong {
 	margin: 0 0 0 2%;
 }
 
+/* Navigation */
 /* Navigation */
 .site-menu > ul {
 	position: relative;
