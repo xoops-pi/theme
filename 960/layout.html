@@ -42,7 +42,7 @@
 		<{if isset($xoopsBlocks.left)}>
 		<div class="grid_3" id="left-block">
 			<{foreach item=block from=$xoopsBlocks.left}>
-				<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+				<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 				<div class="blockcontent"><{$block.content}></div>
 			<{/foreach}>
 		</div>
@@ -61,7 +61,7 @@
 			<!-- Center center -->
 			<{if isset($xoopsBlocks.topcenter)}>
 				<{foreach item=block from=$xoopsBlocks.topcenter}>
-					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 					<div class="blockcontent"><{$block.content}></div>
 				<{/foreach}>
 			<{/if}>
@@ -69,7 +69,7 @@
 			<{if isset($xoopsBlocks.topleft)}>
 				<div class="center-left">
 				<{foreach item=block from=$xoopsBlocks.topleft}>
-					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 					<div class="blockcontent"><{$block.content}></div>
 				<{/foreach}>
 				</div>
@@ -78,7 +78,7 @@
 			<{if isset($xoopsBlocks.topright)}>
 				<div class="center-right">
 				<{foreach item=block from=$xoopsBlocks.topright}>
-					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 					<div class="blockcontent"><{$block.content}></div>
 				<{/foreach}>
 				</div>
@@ -94,7 +94,7 @@
 			<!-- Center center bottom -->
 			<{if isset($xoopsBlocks.bottomcenter)}>
 				<{foreach item=block from=$xoopsBlocks.bottomcenter}>
-					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 					<div class="blockcontent"><{$block.content}></div>
 				<{/foreach}>
 			<{/if}>
@@ -102,7 +102,7 @@
 			<{if isset($xoopsBlocks.bottomleft)}>
 				<div class="center-left">
 				<{foreach item=block from=$xoopsBlocks.bottomleft}>
-					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 					<div class="blockcontent"><{$block.content}></div>
 				<{/foreach}>
 				</div>
@@ -111,7 +111,7 @@
 			<{if isset($xoopsBlocks.bottomright)}>
 				<div class="center-right">
 				<{foreach item=block from=$xoopsBlocks.bottomright}>
-					<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+					<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 					<div class="blockcontent"><{$block.content}></div>
 				<{/foreach}>
 				</div>
@@ -123,7 +123,7 @@
 		<{if isset($xoopsBlocks.right)}>
 		<div class="grid_3" id="right-block">
 			<{foreach item=block from=$xoopsBlocks.right}>
-				<{if $block.title}><h2 class="blocktitle"><{$block.title}></h2><{/if}>
+				<{if $block.title}><h2 class="blocktitle" id="block-<{$block.id}>><{$block.title}></h2><{/if}>
 				<div class="blockcontent"><{$block.content}></div>
 			<{/foreach}>
 		</div>
