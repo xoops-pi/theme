@@ -16,17 +16,9 @@
         <!-- <div id="header-banner"><{widget name=xoops_banner}></div> -->
         <!-- <div id="header-account"><{widget name=account}></div> -->
     </div>
-
 	<!-- Load navigation -->
-	<{navigation assign=navigation}>
-
-	<{if $navigation}>
-		<{include file="nav_default.html"}>
-	<{/if}>
-	<{*include file="nav_default.html" navigation=$navigation*}>
+	<{navigation}>
 	<!-- End header -->
-
-	
 	<{if isset($side_menu)}>
 		<div class="grid_4">
         <!-- Start left blocks loop -->
